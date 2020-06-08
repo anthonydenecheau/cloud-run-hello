@@ -1,0 +1,6 @@
+#Fichier de config CloudBuild
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/cloud-run-hello', '.' ]
+images:
+- 'gcr.io/$PROJECT_ID/cloud-run-hello'
